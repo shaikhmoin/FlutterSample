@@ -22,6 +22,7 @@ class _BodyState extends State<Body> {
              flex: 3,
              child: Column(
               children: <Widget>[
+                Spacer(),
                 Text(
                   "TOKYO",
                   style: TextStyle(
@@ -30,7 +31,13 @@ class _BodyState extends State<Body> {
                    fontWeight: FontWeight.bold,
                  )
                ),
-               const Text("Detail description")
+               const Text("Detail description"),
+               const Spacer(flex: 2),
+               Image.asset(
+                "assets/images/splash_1.png",
+                height: getProportionateScreenHeight(265),
+                width: getProportionateScreenWidth(235),
+               )
              ],
            ),
          ),
