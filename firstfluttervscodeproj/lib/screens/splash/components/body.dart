@@ -1,4 +1,5 @@
 import 'package:firstfluttervscodeproj/constants.dart';
+import 'package:firstfluttervscodeproj/screens/SignIn/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import '../components/splash_content.dart'; //This is the best practice
 import '../../../components/default_button.dart';
@@ -67,10 +68,11 @@ class _BodyState extends State<Body> {
                   ),
                 ),
                 const Spacer(flex: 5),
-                const DefaultButton(
+                DefaultButton(
                   text: "Continue",
-                  // press: () => Navigator.pushNamed(context, SignInScreen.routeName),
-                )
+                      press: () => Navigator.pushNamed(context, SignInScreen.routeName),
+
+                ),
               ],
             ), //Create method
           ),
