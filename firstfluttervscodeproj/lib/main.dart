@@ -1,4 +1,5 @@
 import 'package:firstfluttervscodeproj/constants.dart';
+import 'package:firstfluttervscodeproj/routes.dart';
 import 'package:firstfluttervscodeproj/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false ,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
@@ -21,15 +22,14 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: kTextColor),
           bodyMedium: TextStyle(color: kTextColor),
-          ),
-          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-
-
-        
       ),
-      home: SplashScreen(),
+      //  home: SplashScreen(), OR
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }

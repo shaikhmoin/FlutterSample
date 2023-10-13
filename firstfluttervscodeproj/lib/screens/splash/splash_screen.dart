@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 // ignore: use_key_in_widget_constructors
 class SplashScreen extends StatelessWidget {
 
+static String routeName = "splash";
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
