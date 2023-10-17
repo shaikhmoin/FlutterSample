@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';
 
@@ -37,17 +36,17 @@ class BodyLogin extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              SignForm(),
-              Container(
-                padding: EdgeInsets.all(getProportionateScreenWidth(12)),
-                height: getProportionateScreenHeight(40),
-                width: getProportionateScreenWidth(40),
-                decoration: BoxDecoration ( 
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-                child: SvgPicture.asset("asset/icons/facebook-2.svg"),
-              )
+             SignForm(),
+              // Container(
+              //   padding: EdgeInsets.all(getProportionateScreenWidth(12)),
+              //   height: getProportionateScreenHeight(40),
+              //   width: getProportionateScreenWidth(40),
+              //   decoration: BoxDecoration ( 
+              //     color: Colors.white,
+              //     shape: BoxShape.circle,
+              //   ),
+              //  // child: SvgPicture.asset("asset/icons/facebook-2.svg"),
+              // )
             ],
           ),
         ),

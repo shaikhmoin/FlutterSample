@@ -33,57 +33,58 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: SingleChildScrollView(
-      // width: double.infinity,
-      child: Padding(
-        padding:
-            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              flex: 3,
+      child: SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding:
+              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                flex: 3,
 
-              //used for multiple swipable scroll
-              child: PageView.builder(
-                onPageChanged: (value) {
-                  setState(() {
-                    currentPage = value;
-                  });
-                },
-                itemCount: splashData.length,
+                //used for multiple swipable scroll
+                child: PageView.builder(
+                  onPageChanged: (value) {
+                    setState(() {
+                      currentPage = value;
+                    });
+                  },
+                  itemCount: splashData.length,
 
-                //Extract widget and create SplashContent class
-                itemBuilder: (context, index) => SplashContent(
-                  image: splashData[index]["image"],
-                  text: splashData[index]["text"],
+                  //Extract widget and create SplashContent class
+                  itemBuilder: (context, index) => SplashContent(
+                    image: splashData[index]["image"],
+                    text: splashData[index]["text"],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Column(
-                children: <Widget>[
-                  const Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(
-                      splashData.length,
-                      (index) => buildDOT(index: index),
+              Expanded(
+                flex: 2,
+                child: Column(
+                  children: <Widget>[
+                    const Spacer(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                        splashData.length,
+                        (index) => buildDOT(index: index),
+                      ),
                     ),
-                  ),
-                  const Spacer(flex: 5),
-                  DefaultButton(
-                    text: "Continue",
-                    press: () =>
-                        Navigator.pushNamed(context, SignInScreen.routeName),
-                  ),
-                ],
-              ), //Create method
-            ),
-          ],
+                    const Spacer(flex: 5),
+                    DefaultButton(
+                      text: "Continue",
+                      press: () =>
+                          Navigator.pushNamed(context, SignInScreen.routeName),
+                    ),
+                  ],
+                ), //Create method
+              ),
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 
   AnimatedContainer buildDOT({required int index}) {

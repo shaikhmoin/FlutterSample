@@ -8,5 +8,6 @@
         "surfix",
         "swipable",
         "Tokoto"
-    ]
+    ],
+    "cmake.configureOnOpen": false
 }
