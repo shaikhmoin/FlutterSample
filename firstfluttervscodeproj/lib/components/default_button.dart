@@ -16,9 +16,9 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       //Container or Sizebox but when we take container we can add padding as below.
-      padding: EdgeInsets.symmetric(horizontal: 20),
+     // padding: EdgeInsets.symmetric(horizontal: 20),
       width: double.infinity,
       height: getProportionateScreenHeight(56),
       child: TextButton(

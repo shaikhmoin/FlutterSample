@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:firstfluttervscodeproj/constants.dart';
 import 'package:firstfluttervscodeproj/routes.dart';
 import 'package:firstfluttervscodeproj/screens/splash/splash_screen.dart';
 import 'package:firstfluttervscodeproj/theme.dart';

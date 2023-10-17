@@ -8,9 +8,23 @@ ThemeData theme() {
     fontFamily: "Muli",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
+    inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
     useMaterial3: true,
+  );
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  var outlineInputborder = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(28),
+      borderSide: BorderSide(color: kTextColor),
+      gapPadding: 10,
+    );
+  return InputDecorationTheme(
+    contentPadding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+    enabledBorder: outlineInputborder,
+    focusedBorder: outlineInputborder,
   );
 }
 
