@@ -1,8 +1,10 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:firstfluttervscodeproj/screens/splash/components/body.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
-// ignore: use_key_in_widget_constructors
+//StatelessWidget we cant change data. its a static.
 class SplashScreen extends StatelessWidget {
   static String routeName = "splash";
   // This widget is the root of your application.

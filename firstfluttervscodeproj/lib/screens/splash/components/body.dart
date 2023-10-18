@@ -1,5 +1,5 @@
 import 'package:firstfluttervscodeproj/constants.dart';
-import 'package:firstfluttervscodeproj/screens/SignIn/sign_in_screen.dart';
+import 'package:firstfluttervscodeproj/screens/signIn/sign_in_screen.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 import '../components/splash_content.dart'; //This is the best practice

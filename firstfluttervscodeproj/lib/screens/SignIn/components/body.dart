@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:firstfluttervscodeproj/components/no_account_text.dart';
 import 'package:firstfluttervscodeproj/components/social_card.dart';
-import 'package:firstfluttervscodeproj/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';
 
@@ -63,27 +62,7 @@ class BodyLogin extends StatelessWidget {
                   ),
                 ],
               ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Dont have an account? ",
-                    style: TextStyle(
-                      fontSize: getProportionateScreenWidth(16),
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                  Text(
-                    "Sign Up?",
-                    style: TextStyle(
-                      color: kPrimaryColor,
-                      fontSize: getProportionateScreenWidth(16),
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                ],
-              )
+              NoAccountText(),
             ],
           ),
         ),
@@ -91,3 +70,4 @@ class BodyLogin extends StatelessWidget {
     );
   }
 }
+
