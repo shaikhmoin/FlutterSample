@@ -3,7 +3,9 @@
 import 'package:firstfluttervscodeproj/components/custom_surfix_icon.dart';
 import 'package:firstfluttervscodeproj/components/default_button.dart';
 import 'package:firstfluttervscodeproj/constants.dart';
+import 'package:firstfluttervscodeproj/helper/keyboard.dart';
 import 'package:firstfluttervscodeproj/screens/forgotpassword/forgot_password_screen.dart';
+import 'package:firstfluttervscodeproj/screens/loginsuccess/login_success_screen.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +44,8 @@ class _SignFormState extends State<SignForm> {
               Text("Remember me"),
               Spacer(),
               GestureDetector(
-                onTap: () => Navigator.pushNamed(context, ForgotPasswordScreen.routeName),
+                onTap: () => Navigator.pushNamed(
+                    context, ForgotPasswordScreen.routeName),
                 child: Text(
                   "Forgot Password?",
                   style: TextStyle(decoration: TextDecoration.underline),
@@ -51,10 +54,15 @@ class _SignFormState extends State<SignForm> {
             ],
           ),
           SizedBox(height: getProportionateScreenHeight(20)),
-          DefaultButton(
+           DefaultButton(
             text: "Continue",
-            // press: () => Navigator.pushNamed(context, SignInScreen.routeName),
-          )
+            press: () {
+                // if all are valid then go to success screen
+                KeyboardUtil.hideKeyboard(context);
+                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+              
+            },
+          ),
         ],
       ),
     );

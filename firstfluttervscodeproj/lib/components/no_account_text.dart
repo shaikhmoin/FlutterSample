@@ -1,5 +1,4 @@
 import 'package:firstfluttervscodeproj/constants.dart';
-import 'package:firstfluttervscodeproj/screens/forgotpassword/forgot_password_screen.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 

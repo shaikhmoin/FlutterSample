@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:firstfluttervscodeproj/screens/forgotpassword/components/body.dart';
-import 'package:firstfluttervscodeproj/screens/splash/components/body.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
@@ -22,7 +21,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
         leading: InkWell(onTap:(){
             FocusManager.instance.primaryFocus?.unfocus();
             Navigator.of(context).pop();
-        },child: Icon(Icons.arrow_back)),
+        }
+        ,child: Icon(Icons.arrow_back)),
       ),
       body: BodyForgotPassword(),
     );
