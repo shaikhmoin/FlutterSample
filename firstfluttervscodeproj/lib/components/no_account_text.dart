@@ -1,4 +1,5 @@
 import 'package:firstfluttervscodeproj/constants.dart';
+import 'package:firstfluttervscodeproj/screens/signup/signup_screen.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -20,9 +21,9 @@ class NoAccountText extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          // onTap: ()=> Navigator.popAndPushNamed(
-          //   context, ForgotPasswordScreen.routeName),
-          child: Text( //Wrap with widget for Text and then add GestureDetector
+          onTap: () => Navigator.pushNamed(context, SignupScreen.routeName),
+          child: Text(
+            //Wrap with widget for Text and then add GestureDetector
             "Sign Up?",
             style: TextStyle(
               color: kPrimaryColor,

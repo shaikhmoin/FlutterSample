@@ -77,6 +77,7 @@ class _BodyState extends State<Body> {
                       press: () =>
                           Navigator.pushNamed(context, SignInScreen.routeName),
                     ),
+                     const Spacer(flex: 1),
                   ],
                 ), //Create method
               ),

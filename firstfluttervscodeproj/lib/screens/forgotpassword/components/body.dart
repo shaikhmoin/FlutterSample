@@ -20,7 +20,7 @@ class _BodyForgotPasswordState extends State<BodyForgotPassword> {
       width: double.infinity,
       child: SingleChildScrollView(
         child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+                padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)), //Main left-right padding
           child: Column(
             children: [
               SizedBox(height: SizeConfig.screenHeight * 0.04),

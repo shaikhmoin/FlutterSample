@@ -1,3 +1,4 @@
+import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
 const kPrimaryColor = Color(0xFFFF7643);
@@ -12,3 +13,8 @@ const kTextColor = Color(0xFF757575);
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
+final headingStyle = TextStyle(
+  color: Colors.black,
+  fontSize: getProportionateScreenWidth(28),
+  fontWeight: FontWeight.bold,
+);
