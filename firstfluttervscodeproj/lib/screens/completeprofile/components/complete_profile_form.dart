@@ -3,6 +3,7 @@
 import 'package:firstfluttervscodeproj/components/custom_surfix_icon.dart';
 import 'package:firstfluttervscodeproj/components/default_button.dart';
 import 'package:firstfluttervscodeproj/components/form_error.dart';
+import 'package:firstfluttervscodeproj/screens/otp/otp_screen.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
             text: "continue",
             press: () {
               if (_formKey.currentState!.validate()) {
-               // Navigator.pushNamed(context, OtpScreen.routeName);
+                Navigator.pushNamed(context, OTPScreen.routeName);
               }
             },
           ),

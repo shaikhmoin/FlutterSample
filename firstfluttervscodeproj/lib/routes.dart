@@ -3,6 +3,7 @@
 import 'package:firstfluttervscodeproj/screens/completeprofile/complete_profile_screen.dart';
 import 'package:firstfluttervscodeproj/screens/forgotpassword/forgot_password_screen.dart';
 import 'package:firstfluttervscodeproj/screens/loginsuccess/login_success_screen.dart';
+import 'package:firstfluttervscodeproj/screens/otp/otp_screen.dart';
 import 'package:firstfluttervscodeproj/screens/signIn/sign_in_screen.dart';
 import 'package:firstfluttervscodeproj/screens/signup/signup_screen.dart';
 import 'package:firstfluttervscodeproj/screens/splash/splash_screen.dart';
@@ -17,4 +18,5 @@ final Map<String, WidgetBuilder> routes = {
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
   CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
+  OTPScreen.routeName: (context) => OTPScreen(),
 };
