@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:firstfluttervscodeproj/screens/completeprofile/complete_profile_screen.dart';
 import 'package:firstfluttervscodeproj/screens/forgotpassword/forgot_password_screen.dart';
 import 'package:firstfluttervscodeproj/screens/loginsuccess/login_success_screen.dart';
 import 'package:firstfluttervscodeproj/screens/signIn/sign_in_screen.dart';
@@ -15,4 +16,5 @@ final Map<String, WidgetBuilder> routes = {
   SignupScreen.routeName: (context) => SignupScreen(),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
+  CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
 };

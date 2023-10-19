@@ -2,7 +2,8 @@
 
 import 'package:firstfluttervscodeproj/components/custom_surfix_icon.dart';
 import 'package:firstfluttervscodeproj/components/default_button.dart';
-import 'package:firstfluttervscodeproj/constants.dart';
+import 'package:firstfluttervscodeproj/helper/keyboard.dart';
+import 'package:firstfluttervscodeproj/screens/completeprofile/complete_profile_screen.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -35,8 +36,8 @@ class _SignupFormState extends State<SignupForm> {
             text: "Continue",
             press: () {
               // if all are valid then go to success screen
-              // KeyboardUtil.hideKeyboard(context);
-              //  Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+               KeyboardUtil.hideKeyboard(context);
+               Navigator.pushNamed(context, CompleteProfileScreen.routeName);
             },
           ),
         ],
