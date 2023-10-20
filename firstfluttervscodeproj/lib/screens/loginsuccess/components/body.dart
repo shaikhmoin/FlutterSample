@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:firstfluttervscodeproj/components/default_button.dart';
+import 'package:firstfluttervscodeproj/screens/home/home_screen.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -40,9 +41,7 @@ class BodyLoginSuccess extends StatelessWidget {
             width: SizeConfig.screenWidth * 0.6,
             child: DefaultButton(
               text: "Back to home",
-              press: () {
-                //Navigator.pushNamed(context, HomeScreen.routeName);
-              },
+              press: () => Navigator.pushNamed(context, HomeScreen.routeName),
             ),
           ),
           Spacer(),
