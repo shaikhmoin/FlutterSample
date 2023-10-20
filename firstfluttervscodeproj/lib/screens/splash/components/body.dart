@@ -32,72 +32,78 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+      return SafeArea(
       child: SizedBox(
         width: double.infinity,
-        child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: Column(
-            children: <Widget>[
-              Expanded(
-                flex: 3,
-
-                //used for multiple swipable scroll
-                child: PageView.builder(
-                  onPageChanged: (value) {
-                    setState(() {
-                      currentPage = value;
-                    });
-                  },
-                  itemCount: splashData.length,
-
-                  //Extract widget and create SplashContent class
-                  itemBuilder: (context, index) => SplashContent(
-                    image: splashData[index]["image"],
-                    text: splashData[index]["text"],
-                  ),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 3,
+              child: PageView.builder(
+                onPageChanged: (value) {
+                  setState(() {
+                    currentPage = value;
+                  });
+                },
+                itemCount: splashData.length,
+                itemBuilder: (context, index) => SplashContent(
+                  image: splashData[index]["image"],
+                  text: splashData[index]['text'],
                 ),
               ),
-              Expanded(
-                flex: 2,
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: getProportionateScreenWidth(20)),
                 child: Column(
                   children: <Widget>[
-                    const Spacer(),
+                    Spacer(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
                         splashData.length,
-                        (index) => buildDOT(index: index),
+                        (index) => AnimatedContainer(
+                          duration: kAnimationDuration,
+                          margin: EdgeInsets.only(right: 5),
+                          height: 6,
+                          width: currentPage == index ? 20 : 6,
+                          decoration: BoxDecoration(
+                            color: currentPage == index
+                                ? kPrimaryColor
+                                : Color(0xFFD8D8D8),
+                            borderRadius: BorderRadius.circular(3),
+                          ),
+                        ),
                       ),
                     ),
-                    const Spacer(flex: 5),
+                    Spacer(flex: 3),
                     DefaultButton(
                       text: "Continue",
-                      press: () =>
-                          Navigator.pushNamed(context, SignInScreen.routeName),
+                      press: () => Navigator.pushNamed(context, SignInScreen.routeName),
                     ),
-                     const Spacer(flex: 1),
+                    Spacer(),
                   ],
-                ), //Create method
+                ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
   }
 
-  AnimatedContainer buildDOT({required int index}) {
-    return AnimatedContainer(
-      duration: kAnimationDuration,
-      margin: const EdgeInsets.only(right: 5),
-      height: 6,
-      width: currentPage == index ? 20 : 6,
-      decoration: BoxDecoration(
-        color: currentPage == index ? kPrimaryColor : kPrimaryLightColor,
-        borderRadius: BorderRadius.circular(3),
-      ),
-    );
-  }
+  // AnimatedContainer buildDOT({required int index}) {
+  //   return AnimatedContainer(
+  //     duration: kAnimationDuration,
+  //     margin: const EdgeInsets.only(right: 5),
+  //     height: 6,
+  //     width: currentPage == index ? 20 : 6,
+  //     decoration: BoxDecoration(
+  //       color: currentPage == index ? kPrimaryColor : kPrimaryLightColor,
+  //       borderRadius: BorderRadius.circular(3),
+  //     ),
+  //   );
+  // }
 }

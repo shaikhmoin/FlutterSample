@@ -17,6 +17,12 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text("Home"),
+        leading: InkWell(
+            onTap: () {
+              FocusManager.instance.primaryFocus?.unfocus();
+              Navigator.of(context).pop();
+            },
+            child: Icon(Icons.arrow_back)),
       ),
       body: BodyHome(),
     );

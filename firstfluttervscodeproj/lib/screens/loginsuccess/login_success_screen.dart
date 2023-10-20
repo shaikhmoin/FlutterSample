@@ -12,6 +12,12 @@ class LoginSuccessScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text("Login Success"),
+        leading: InkWell(
+            onTap: () {
+              FocusManager.instance.primaryFocus?.unfocus();
+              Navigator.of(context).pop();
+            },
+            child: Icon(Icons.arrow_back)),
       ),
       body: BodyLoginSuccess(),
     );
