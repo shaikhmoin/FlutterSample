@@ -1,68 +1,41 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, use_key_in_widget_constructors, unused_local_variable
+// ignore_for_file: dead_code, prefer_const_constructors
 
-import 'package:firstfluttervscodeproj/screens/home/components/categories.dart';
-import 'package:firstfluttervscodeproj/screens/home/components/discount_banner.dart';
-import 'package:firstfluttervscodeproj/screens/home/components/home_header.dart';
 import 'package:firstfluttervscodeproj/screens/home/components/section_title.dart';
 import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
-class BodyHome extends StatelessWidget {
+class SpecialOffers extends StatelessWidget {
+  const SpecialOffers({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: getProportionateScreenWidth(30)),
-            HomeHeader(),
-            SizedBox(height: getProportionateScreenWidth(30)),
-            DiscountBanner(),
-            SizedBox(height: getProportionateScreenWidth(30)),
-            Categories(),
-            SizedBox(height: getProportionateScreenWidth(30)),
-            // SpecialOffers(),
-            SectionTitle(
-              text: 'Special for you',
-              press: () {},
-            ),
-            SizedBox(height: getProportionateScreenWidth(20)),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  SpecialOfferCard(
-                    image: "assets/images/Image Banner 2.png",
-                    category: "Smartphone",
-                    numOfBrands: 18,
-                    press: () {},
-                  ),
-                  SpecialOfferCard(
-                    image: "assets/images/Image Banner 3.png",
-                    category: "Fashion",
-                    numOfBrands: 24,
-                    press: () {},
-                  ),
-                  SpecialOfferCard(
-                    image: "assets/images/Image Banner 2.png",
-                    category: "Smartphone",
-                    numOfBrands: 18,
-                    press: () {},
-                  ),
-                  SpecialOfferCard(
-                    image: "assets/images/Image Banner 3.png",
-                    category: "Fashion",
-                    numOfBrands: 24,
-                    press: () {},
-                  ),
-                  SizedBox(width: getProportionateScreenWidth(20)),
-                ],
-              ),
-            ),
-          ],
-        ),
+    return SectionTitle(
+      text: 'Special for you',
+      press: () {},
+    );
+
+    SizedBox(height: getProportionateScreenWidth(20));
+    SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          SpecialOfferCard(
+            image: "assets/images/Image Banner 2.png",
+            category: "Smartphone",
+            numOfBrands: 18,
+            press: () {},
+          ),
+          SpecialOfferCard(
+            image: "assets/images/Image Banner 3.png",
+            category: "Fashion",
+            numOfBrands: 24,
+            press: () {},
+          ),
+          SizedBox(width: getProportionateScreenWidth(20)),
+        ],
       ),
     );
+    
   }
 }
 

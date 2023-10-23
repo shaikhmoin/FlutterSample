@@ -44,4 +44,3 @@ class DiscountBanner extends StatelessWidget {
     );
   }
 }
-
