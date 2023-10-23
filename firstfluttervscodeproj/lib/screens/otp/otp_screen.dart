@@ -16,6 +16,10 @@ class _OTPScreenState extends State<OTPScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("OTP Verification"),
+         leading: InkWell(onTap:(){
+            FocusManager.instance.primaryFocus?.unfocus();
+            Navigator.of(context).pop();
+        },child: Icon(Icons.arrow_back)),
       ),
       body: BodyOTP(),
     );
