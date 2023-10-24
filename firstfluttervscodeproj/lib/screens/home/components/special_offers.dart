@@ -1,51 +1,59 @@
-// ignore_for_file: dead_code, prefer_const_constructors
-
-import 'package:firstfluttervscodeproj/screens/home/components/section_title.dart';
-import 'package:firstfluttervscodeproj/size_config.dart';
 import 'package:flutter/material.dart';
 
+import '../../../size_config.dart';
+import 'section_title.dart';
+
 class SpecialOffers extends StatelessWidget {
-  const SpecialOffers({super.key});
+  const SpecialOffers({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SectionTitle(
-      text: 'Special for you',
-      press: () {},
-    );
-
-    SizedBox(height: getProportionateScreenWidth(20));
-    SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          SpecialOfferCard(
-            image: "assets/images/Image Banner 2.png",
-            category: "Smartphone",
-            numOfBrands: 18,
+    return Column(
+      children: [
+        Padding(
+          padding:
+              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          child: SectionTitle(
+            title: "Special for you",
             press: () {},
           ),
-          SpecialOfferCard(
-            image: "assets/images/Image Banner 3.png",
-            category: "Fashion",
-            numOfBrands: 24,
-            press: () {},
+        ),
+        SizedBox(height: getProportionateScreenWidth(20)),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SpecialOfferCard(
+                image: "assets/images/Image Banner 2.png",
+                category: "Smartphone",
+                numOfBrands: 18,
+                press: () {},
+              ),
+              SpecialOfferCard(
+                image: "assets/images/Image Banner 3.png",
+                category: "Fashion",
+                numOfBrands: 24,
+                press: () {},
+              ),
+              SizedBox(width: getProportionateScreenWidth(20)),
+            ],
           ),
-          SizedBox(width: getProportionateScreenWidth(20)),
-        ],
-      ),
+        ),
+      ],
     );
-    
   }
 }
 
 class SpecialOfferCard extends StatelessWidget {
-  const SpecialOfferCard(
-      {super.key,
-      required this.category,
-      required this.image,
-      required this.numOfBrands,
-      required this.press});
+  const SpecialOfferCard({
+    Key? key,
+    required this.category,
+    required this.image,
+    required this.numOfBrands,
+    required this.press,
+  }) : super(key: key);
 
   final String category, image;
   final int numOfBrands;
