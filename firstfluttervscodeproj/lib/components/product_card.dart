@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:firstfluttervscodeproj/models/Product.dart';
+import 'package:firstfluttervscodeproj/screens/details/details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -17,7 +18,7 @@ class ProductCard extends StatelessWidget {
 
   final double width, aspectRetio;
   final Product product;
-
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,11 +26,11 @@ class ProductCard extends StatelessWidget {
       child: SizedBox(
         width: getProportionateScreenWidth(width),
         child: GestureDetector(
-          // onTap: () => Navigator.pushNamed(
-          //   context,
-          //   DetailsScreen.routeName,
-          //   arguments: ProductDetailsArguments(product: product),
-          // ),
+          onTap: () => Navigator.pushNamed(
+            context,
+            DetailsScreen.routeName,
+            arguments: ProductDetailsArguments(product: product),
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -81,7 +82,7 @@ class ProductCard extends StatelessWidget {
                         "assets/icons/Heart Icon_2.svg",
                         color: product.isFavourite
                             ? Color(0xFFFF4848)
-                            : Color(0xFFDBDEE4),
+                            : Color.fromARGB(255, 42, 42, 44),
                       ),
                     ),
                   ),

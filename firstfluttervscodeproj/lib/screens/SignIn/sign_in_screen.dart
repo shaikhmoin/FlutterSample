@@ -12,8 +12,7 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-
-@override
+  @override
   void initState() {
     FocusManager.instance.primaryFocus?.hasFocus;
     super.initState();
@@ -21,13 +20,19 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text("Sign In"),
+    //     leading: InkWell(onTap:(){
+    //         FocusManager.instance.primaryFocus?.unfocus();
+    //         Navigator.of(context).pop();
+    //     },child: Icon(Icons.arrow_back)),
+    //   ),
+    //   body: BodyLogin(),
+    // );
     return Scaffold(
       appBar: AppBar(
         title: Text("Sign In"),
-        leading: InkWell(onTap:(){
-            FocusManager.instance.primaryFocus?.unfocus();
-            Navigator.of(context).pop();
-        },child: Icon(Icons.arrow_back)),
       ),
       body: BodyLogin(),
     );

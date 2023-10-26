@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 class NoAccountText extends StatelessWidget {
   const NoAccountText({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,22 +14,16 @@ class NoAccountText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Dont have an account? ",
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(16),
-            fontWeight: FontWeight.normal,
-          ),
+          "Don’t have an account? ",
+          style: TextStyle(fontSize: getProportionateScreenWidth(16)),
         ),
         GestureDetector(
           onTap: () => Navigator.pushNamed(context, SignupScreen.routeName),
           child: Text(
-            //Wrap with widget for Text and then add GestureDetector
-            "Sign Up?",
+            "Sign Up",
             style: TextStyle(
-              color: kPrimaryColor,
-              fontSize: getProportionateScreenWidth(16),
-              fontWeight: FontWeight.normal,
-            ),
+                fontSize: getProportionateScreenWidth(16),
+                color: kPrimaryColor),
           ),
         ),
       ],

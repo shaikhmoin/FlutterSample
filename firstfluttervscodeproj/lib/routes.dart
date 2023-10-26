@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:firstfluttervscodeproj/screens/completeprofile/complete_profile_screen.dart';
+import 'package:firstfluttervscodeproj/screens/details/details_screen.dart';
 import 'package:firstfluttervscodeproj/screens/forgotpassword/forgot_password_screen.dart';
 import 'package:firstfluttervscodeproj/screens/home/home_screen.dart';
 import 'package:firstfluttervscodeproj/screens/loginsuccess/login_success_screen.dart';
@@ -21,4 +22,5 @@ final Map<String, WidgetBuilder> routes = {
   CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
   OTPScreen.routeName: (context) => OTPScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
+  DetailsScreen.routeName: (context) => DetailsScreen(),
 };
