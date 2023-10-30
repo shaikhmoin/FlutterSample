@@ -32,6 +32,7 @@ class BodyLogin extends StatelessWidget {
                     fontSize: getProportionateScreenWidth(28),
                     fontWeight: FontWeight.bold,
                   ),
+                  
                 ),
                 Text(
                   "Sign in with your email and password  \nor continue with social media",

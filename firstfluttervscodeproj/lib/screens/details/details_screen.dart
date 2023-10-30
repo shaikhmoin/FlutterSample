@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_print
 
 import 'package:firstfluttervscodeproj/models/Product.dart';
+import 'package:firstfluttervscodeproj/screens/details/components/body.dart';
+import 'package:firstfluttervscodeproj/screens/details/components/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -15,17 +17,12 @@ class DetailsScreen extends StatelessWidget {
     print("Selected Product: ${agrs.product.price}");
 
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Text(agrs.product.title),
-        leading: InkWell(
-            onTap: () {
-              FocusManager.instance.primaryFocus?.unfocus();
-              Navigator.of(context).pop();
-            },
-            child: Icon(Icons.arrow_back)),
+      backgroundColor: Color(0xFFF5F6F9),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(AppBar().preferredSize.height),
+        child: CustomAppBar(rating: agrs.product.rating),
       ),
-      // body: BodyHome(),
+      body: BodyDetails(product: agrs.product),
     );
   }
 }
